@@ -1,0 +1,26 @@
+﻿# Local workflow control-plane state is not package content.
+docs/workflows/**
+!docs/workflows/
+!docs/workflows/2026-06-14-package-codex-workflow/
+docs/workflows/2026-06-14-package-codex-workflow/**
+!docs/workflows/2026-06-14-package-codex-workflow/developer-output.md
+
+# Local/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Runtime and build outputs
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+
+# Local environment and credentials
+.env
+.env.*
+*.pem
+*.p12
+*.key

@@ -1,4 +1,4 @@
-﻿# AGENTS.md
+# AGENTS.md
 
 ## Project Goal
 
@@ -6,13 +6,29 @@ This repository packages a reusable Codex workflow framework. Changes must prese
 
 ## Non-Negotiable Rules
 
-1. Do not publish raw local workflow run state, private paths, caches, secrets, or unrelated project files.
+1. Do not publish raw local workflow run state, private paths, caches, credentials, or unrelated project files.
 2. Before changing files, identify affected files, current behavior, unchanged requirements, and risks.
 3. Keep changes scoped and incremental.
 4. Reuse existing templates and docs instead of creating duplicates.
 5. Do not leave temporary debug notes, stale markers, or dead files.
 6. Run repository validation before committing package changes.
 7. AI-authored pull requests must remain open for human testing unless the human explicitly commands a merge after testing.
+
+## Required Workflow
+
+Before implementation:
+
+- Summarize current relevant behavior.
+- List files that may be modified.
+- List existing features and workflow guarantees that must remain unchanged.
+- Explain risks when existing behavior could be affected.
+
+After implementation:
+
+- Show a concise diff summary.
+- List what changed and what was intentionally not changed.
+- List verification commands and results.
+- Record remaining risks.
 
 ## Strict Workflow Rules
 
@@ -29,3 +45,4 @@ Run:
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validate-docs.ps1
 ```
+
